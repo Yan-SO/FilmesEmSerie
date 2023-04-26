@@ -62,6 +62,7 @@ export default function AddConteudo(){
     }
 }
 
+
 const style = (fundo, corTextoBotao,largura)=>(StyleSheet.create({
     tela:{
         backgroundColor:fundo,

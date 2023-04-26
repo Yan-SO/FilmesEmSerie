@@ -14,6 +14,7 @@ export default function ImputCampo({ titulo, value, onChangeText, styles,keyboar
 }
 
 
+
 const style = (textoCor , largura)=> (StyleSheet.create({
     campoConteiner:{
         alignItems:"center",

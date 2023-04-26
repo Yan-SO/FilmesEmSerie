@@ -15,7 +15,6 @@ export default function Cadastro(){
     
     const textcadastro = ()=>{console.log('cadastro')}
 
-
     return(
         <ScrollView style={estilos.tela}>
             <StatusBar/>

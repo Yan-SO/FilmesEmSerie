@@ -36,6 +36,7 @@ const itens = [
 ];
 
 
+
 export default function Lista(){
     const estilo = style('#001207','#FFF','#000');
     const tipo = 'Filmes';

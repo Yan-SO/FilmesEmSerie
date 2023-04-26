@@ -6,7 +6,7 @@ export default function ItemLista({ item }){
     const estilo = style();
     
     const conteudo = item.item;
-    //console.log(item.item.imagem)
+
 
     if(conteudo.tipo == 'Filme'){
         return(

@@ -8,7 +8,6 @@ export default function Login(){
     const largura = useWindowDimensions().width;
     const estilos = style("#202124","#f2f2f2", largura); 
 
-
     const textlogin = ()=>{console.log(largura)}
     const textcadastro = ()=>{console.log('cadastro')}
 
@@ -19,6 +18,7 @@ export default function Login(){
 
             <ImputCampo titulo={'Nome de Usuario'}/>
             <ImputCampo titulo={'Senha'}/>
+
 
             <Botao texto={'Entrar'} onPress={textlogin} largura={(largura/3)}/>            
             <Botao texto={'Cadastrar'} onPress={textcadastro} largura={(largura/3)-15} />            

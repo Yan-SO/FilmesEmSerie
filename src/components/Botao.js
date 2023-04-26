@@ -1,6 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
+
+
 export default function Botao({  texto, onPress, largura }){
     const estilos = style("#000", '#fff','#ccc', largura); 
     return(

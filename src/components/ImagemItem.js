@@ -6,13 +6,12 @@ export default function ImagemItem({imagem}){
     const estilo = style('#202124');
 
     return (
-        
-            <View style={estilo.imagemConteire}>
-                <Image style={estilo.imagem} source={imagem}/>
-            </View>
-        
+        <View style={estilo.imagemConteire}>
+            <Image style={estilo.imagem} source={imagem}/>
+        </View>
     );
 }
+
 
 const style = ( fundoImagem)=>(StyleSheet.create({
     
