@@ -2,6 +2,7 @@ import { FlatList, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "r
 import ItemLista from "../../components/ItemLista";
 import { AntDesign } from '@expo/vector-icons';
 import Botao from "../../components/Botao";
+import { useNavigation } from "@react-navigation/native";
 
 
 const itens = [
@@ -38,6 +39,7 @@ const itens = [
 
 
 export default function Lista(){
+    const navigation = useNavigation();
     const estilo = style('#001207','#FFF','#000');
     const tipo = 'Filmes';
 
@@ -48,7 +50,7 @@ export default function Lista(){
         <View style={estilo.cabecario}>
             <StatusBar />
             <Text style={estilo.nome}>{  tipo  }</Text>
-            <TouchableOpacity style={estilo.iconConteiner}>
+            <TouchableOpacity style={estilo.iconConteiner} onPress={()=> navigation.navigate('Adicionar Conteudo')}>
                 <AntDesign name="pluscircleo" style={estilo.icon} />
             </TouchableOpacity>
         </View>

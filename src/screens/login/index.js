@@ -2,8 +2,10 @@ import { View, Text, TextInput, StyleSheet, useWindowDimensions, Image, StatusBa
 import Botao from "../../components/Botao";
 import Logo from "../../../assets/Logo.png"
 import ImputCampo from "../../components/ImputCampo";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Login(){ 
+    const navigation = useNavigation()
 
     const largura = useWindowDimensions().width;
     const estilos = style("#202124","#f2f2f2", largura); 
@@ -20,8 +22,10 @@ export default function Login(){
             <ImputCampo titulo={'Senha'}/>
 
 
-            <Botao texto={'Entrar'} onPress={textlogin} largura={(largura/3)}/>            
-            <Botao texto={'Cadastrar'} onPress={textcadastro} largura={(largura/3)-15} />            
+            <Botao texto={'Entrar'} onPress={() => 
+                    navigation.reset({index: 0, routes: [{ name: 'Home' }],})
+                } largura={(largura/3)}/>            
+            <Botao texto={'Cadastrar'} onPress={() => navigation.navigate('Cadastro')} largura={(largura/3)-15} />            
             
         </View>
     );

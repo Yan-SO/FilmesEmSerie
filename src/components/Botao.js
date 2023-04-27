@@ -3,11 +3,11 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 
 
-export default function Botao({  texto, onPress, largura }){
+export default function Botao({  texto, onPress, largura, styleBotao, styleTexto }){
     const estilos = style("#000", '#fff','#ccc', largura); 
     return(
-        <TouchableOpacity onPress={()=> onPress()} style={estilos.conteinerBotao}>
-            <Text style={estilos.texto} >{texto}</Text>
+        <TouchableOpacity onPress={()=> onPress()} style={[estilos.conteinerBotao, styleBotao]}>
+            <Text style={[estilos.texto, styleTexto]} >{texto}</Text>
         </TouchableOpacity>
     );
 }
@@ -26,4 +26,5 @@ const style = (fundo, letra, borda, largura) => (StyleSheet.create({
         textAlign:"center",
         fontSize:20,
     },
+
 }));

@@ -24,8 +24,8 @@ export default function AddConteudo(){
 
         return(
             <ScrollView style={estilo.tela}>
-            <StatusBar/>
-            <ImputCampo styles={estilo.imputCampo} titulo={'Titolo'} value={titulo} onChangeText={(texto)=>setTitulo(texto)}/>
+            
+            <ImputCampo styles={estilo.imputCampo} titulo={'Titulo'} value={titulo} onChangeText={(texto)=>setTitulo(texto)}/>
             <ImputCampo styles={estilo.imputCampo} keyboardType={"numeric"} titulo={'Duração'} value={duracao} onChangeText={(texto)=>setDuracao(texto)}/>
             <ImputCampo styles={estilo.imputCampo} titulo={'Enteresse'} value={enteresse} onChangeText={(texto)=>setEnteresse(texto)}/>
             <View style={estilo.itemConteiner}>
@@ -42,8 +42,8 @@ export default function AddConteudo(){
     }else{
         return(
             <ScrollView style={estilo.tela}>
-            <StatusBar/>
-            <ImputCampo styles={estilo.imputCampo} titulo={'Titolo'} value={titulo} onChangeText={(texto)=>setTitulo(texto)}/>
+            
+            <ImputCampo styles={estilo.imputCampo} titulo={'Titulo'} value={titulo} onChangeText={(texto)=>setTitulo(texto)}/>
             <ImputCampo styles={estilo.imputCampo} keyboardType={"numeric"} titulo={'Temporadas'} value={temporadas} onChangeText={(texto)=>setTemporadas(texto)}/>
             <ImputCampo styles={estilo.imputCampo} titulo={'Enteresse'} value={enteresse} onChangeText={(texto)=>setEnteresse(texto)}/>
             <ImputCampo styles={estilo.imputCampo} titulo={'Ponto Atual no Conteúdo'} value={pontoAtual} onChangeText={(texto)=>setPontoAtual(texto)}/>
@@ -56,7 +56,7 @@ export default function AddConteudo(){
                     </TouchableOpacity>
                 </View>
             </View>
-            <Botao texto={'Salvar o Conteúdo'}  onPress={()=> console.log('salvado')}/>
+            <Botao styleBotao={estilo.styleBotao} texto={'Salvar o Conteúdo'}  onPress={()=> console.log('salvado')}/>
         </ScrollView>
         );
     }
@@ -65,6 +65,7 @@ export default function AddConteudo(){
 
 const style = (fundo, corTextoBotao,largura)=>(StyleSheet.create({
     tela:{
+        paddingTop:40,
         backgroundColor:fundo,
     },
     itemConteiner:{
@@ -97,4 +98,7 @@ const style = (fundo, corTextoBotao,largura)=>(StyleSheet.create({
         color:corTextoBotao,
         fontSize:25
     },
+    styleBotao:{
+        marginBottom:60
+    }
 }));
